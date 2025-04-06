@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --body-bg: black;
+    --main-bg: hsl(225, 100%, 94%);
+    --container-bg: #fff;
+    --card-bg: aliceblue;
+    --cta-bg: blue;
+}
+
+/* the whole body work */
+
+body{
+    width: 90%;
+   margin: auto;
+   background-color: var(--body-bg);
+}
+
+main{
+   background-color: var(--main-bg);
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+/* total container */
+.container{
+    background-color: var(--container-bg);
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 10px;
+}
+
+/* head section with image */
+.container img{
+    border-radius: 10px 10px 0 0;
+}
+
+/* content */
+section{
+    text-align: center;
+    padding-inline: 1rem;
+}
+
+section h2{
+    margin-block: 1.3rem;
+    font-weight: bolder;
+    opacity: 0.7;
+}
+
+section .text{
+    margin: 0.2rem 0 1.5rem 0;
+    padding-inline: 1.2rem;
+    word-spacing: 9px;
+    line-height: 1.5;
+    opacity: 0.7;
+}
+
+.card{
+
+    background-color: var(--card-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 0.5rem;
+    border-radius: 10px;
+
+}
+
+.card img{
+    width: 45px;
+    padding-left: 0.5rem;
+}
+
+.card ul{
+    list-style: none;
+    opacity: 0.8;
+}
+
+.card ul li:nth-child(1){
+    font-weight: bold;
+    
+}
+.card ul li:nth-child(2){
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.card a{
+    padding-right: 0.7rem;
+    font-size: large;
+    font-weight: 900;
+}
+
+/* footer */
+section .cta{
+    display: block;
+    margin-block: 1.6rem;
+    background-color: var(--cta-bg);
+    color: #fff;
+    width: 100%;
+    padding: 0.7rem 0;
+    border-radius: 10px; 
+    text-decoration: none;
+    opacity: 0.8;
+    box-shadow: 1px 10px 15px rgb(180, 180, 247);
+}
+
+.order{
+    margin-block: 1.5rem;
+    font-weight: 900;
+    opacity: 0.8;
+}
+
+
+/* responsiveness for mobile screensize */
+@media screen and (max-width:500px){
+    
+    .card{
+        position: relative;
+    }
+
+    .card ul{
+        position: absolute;
+        list-style: none;
+        left: 35px;
+    
+    }
+}
+
+
+/* responsiveness for tablet screensize */
+@media screen and (min-width:760px){
+
+    .container{
+        width: 40%;
+        margin: auto;
+    }
+
+    .card{
+        position: relative;
+    }
+
+    .card ul{
+        position: absolute;
+        list-style: none;
+        left: 20px;
+    
+    }
+
+    section .text{
+        line-height: 1.2;
+        word-spacing: 1px;
+        padding-inline: 0.5rem;
+        
+    }
+}
+
+
+/* responsiveness for minor laptop screensize */
+@media screen and (min-width:980px) {
+
+    .container{
+        width: 30%;
+        margin: auto;
+    }
+
+    .card{
+        position: relative;
+    }
+
+    .card ul{
+        position: absolute;
+        list-style: none;
+        left: 20px;
+    
+    }
+
+    section .text{
+        line-height: 1.2;
+        word-spacing: 1px;
+        padding-inline: 0.5rem;
+        
+    }
+}
+
+/* responsiveness for normal screensize */
+@media screen and (min-width:1100px) {
+
+    main{
+        background-image: url('image/pattern-background-desktop.svg');
+    }
+
+    .container{
+        width: 25%;
+        margin: auto;
+    }
+
+    .card{
+        position: relative;
+    }
+
+    .card ul{
+        position: absolute;
+        list-style: none;
+        left: 30px;
+    
+    }
+
+    section .text{
+        line-height: 1.2;
+        word-spacing: 1px;
+        padding-inline: 0.5rem;
+        
+    }
+}
